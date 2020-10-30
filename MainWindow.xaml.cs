@@ -122,7 +122,7 @@ namespace Trifan_Ana_Lab2
             this.Close();
         }
 
-        private void lblQuantity1_KeyUp(object sender, KeyEventArgs e)
+        private void txtQuantity_KeyUp(object sender, KeyEventArgs e)
         {
             if (!(e.Key >= Key.D0 && e.Key <= Key.D9))
             {
@@ -131,20 +131,7 @@ namespace Trifan_Ana_Lab2
             }
         }
 
-        private void lemonFilledMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void vanillaFilledMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void chocolateFilledMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
         private void FilledItems_Click(object sender, RoutedEventArgs e)
         {
             string DoughnutFlavour;

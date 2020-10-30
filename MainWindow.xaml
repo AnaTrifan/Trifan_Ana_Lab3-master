@@ -6,7 +6,7 @@
        xmlns:local="clr-namespace:Trifan_Ana_Lab2"
        xmlns:CustomCommands="clr-namespace:Trifan_Ana_Lab2.CustomCommands"
         mc:Ignorable="d"
-        Title="Virtual Doughnuts Factory" Height="470" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        Title="Virtual Doughnuts Factory" Height="470" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Loaded="frmMain_Loaded_1">
     <Grid Margin="0,0,0,-21" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -39,7 +39,7 @@
             </Canvas>
         </GroupBox>
         <Label x:Name="lblSugarRaised" Content="Sugar" Margin="39,133,517,237" FontSize="20"/>
-        <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" FontWeight="Bold" IsReadOnly="False" Canvas.Left="140" Canvas.Top="8" RenderTransformOrigin="1.206,0.165" Margin="170,174,494,249">
+        <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" FontWeight="Bold" IsReadOnly="False" Canvas.Left="140" Canvas.Top="8" RenderTransformOrigin="1.206,0.165" Margin="172,158,516,289">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -63,7 +63,7 @@
             </GroupBox.RenderTransform>
             <Canvas Margin="0,0,0,21">
                 <Label x:Name="lblQuantity" Content="Quantity" Height="51" Canvas.Left="7" Canvas.Top="-10" FontWeight="Normal" FontSize="18" Width="113" RenderTransformOrigin="0.498,0.366"/>
-                <TextBox x:Name="txtQuantity" TextWrapping="Wrap" Width="47" RenderTransformOrigin="3.373,0.767" Canvas.Left="108" Canvas.Top="1" Height="26" KeyUp="lblQuantity1_KeyUp"/>
+                <TextBox x:Name="txtQuantity" TextWrapping="Wrap" Width="47" RenderTransformOrigin="3.373,0.767" Canvas.Left="108" Canvas.Top="1" Height="26" KeyUp="txtQuantity_KeyUp"/>
                 <Label x:Name="lblPrice" Content="Price" Canvas.Left="443" Canvas.Top="-10" FontWeight="Normal" FontSize="18" Height="41"/>
                 <TextBox x:Name="txtPrice" TextWrapping="Wrap" Width="120" Canvas.Left="515" Canvas.Top="-2" FontSize="16" RenderTransformOrigin="0.487,0.124" Height="30"/>
                 <ListBox x:Name="lstSale" Height="45" Width="630" Canvas.Left="7" Canvas.Top="35">
@@ -92,13 +92,13 @@ Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
 IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
                     <MenuItem Header="Filled" Click="FilledItems_Click">
-                          <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon" Click="lemonFilledMenuItem_Click" IsCheckable="True"/>
-                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" Click="chocolateFilledMenuItem_Click" IsCheckable="True"/>
-                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" Click="vanillaFilledMenuItem_Click" IsCheckable="True"/>
+                          <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon" IsCheckable="True"/>
+                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" IsCheckable="True"/>
+                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True"/>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem x:Name="mnuStop" Header="Stop" Click="StopToolStripMenuItem_Click" InputGestureText="Ctrl+S" CommandParameter="CustomCommands:StopCommand.Launch"/>
-                />
+                
                 <MenuItem Header="Inventory" CommandParameter="ApplicationCommands.Print"></MenuItem>
             </MenuItem>
             <Grid MenuItem.Click="FilledItemsShow_Click"/>
